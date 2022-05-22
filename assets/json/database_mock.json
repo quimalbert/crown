@@ -1,0 +1,947 @@
+{
+  "baseCards": {
+    "church": {
+      "characterName": "Pope",
+      "imagePath": "assets/images/base_cards/pope.png",
+      "color": "purple",
+      "dialogs": [
+        {
+          "message": "El Gremio de mercaderes vende productos tradicionales a la abadía. Acabad con ésto.",
+          "yes": {
+            "answer": "Sí",
+            "churchPoints": 1,
+            "peoplePoints": 0,
+            "armyPoints": 0,
+            "moneyPoints": -1
+          },
+          "no": {
+            "answer": "No",
+            "churchPoints": -1,
+            "peoplePoints": 0,
+            "armyPoints": 0,
+            "moneyPoints": 1
+          }
+        },
+        {
+          "message": "Vuestros campesinos se reproducen como conejos. ¡Enviemos a la cruzada a todos los hombres en edad de usar armas!",
+          "yes": {
+            "answer": "Sí",
+            "churchPoints": 1,
+            "peoplePoints": -1,
+            "armyPoints": 1,
+            "moneyPoints": -1
+          },
+          "no": {
+            "answer": "No",
+            "churchPoints": -1,
+            "peoplePoints": 1,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          }
+        },
+        {
+          "message": "Vuestros soldados están forzando a los curas y a sus fieles para darles dinero a cambio de protección. ¡Debéis poner fin!",
+          "yes": {
+            "answer": "Sí",
+            "churchPoints": 1,
+            "peoplePoints": 1,
+            "armyPoints": -1,
+            "moneyPoints": -1
+          },
+          "no": {
+            "answer": "No",
+            "churchPoints": -1,
+            "peoplePoints": -1,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          }
+        },
+        {
+          "message": "Me gustaría dar una misa en memoria de vuestro padre.",
+          "yes": {
+            "answer": "Sí",
+            "churchPoints": 1,
+            "peoplePoints": 0,
+            "armyPoints": 0,
+            "moneyPoints": 1
+          },
+          "no": {
+            "answer": "No",
+            "churchPoints": -1,
+            "peoplePoints": 0,
+            "armyPoints": -1,
+            "moneyPoints": 0
+          }
+        },
+        {
+          "message": "Dadnos poder para hacer respetar la ley del Más Alto. El papa está dispuesto a pagar el precio.",
+          "yes": {
+            "answer": "Sí",
+            "churchPoints": 1,
+            "peoplePoints": -1,
+            "armyPoints": 0,
+            "moneyPoints": 1
+          },
+          "no": {
+            "answer": "No",
+            "churchPoints": -1,
+            "peoplePoints": 0,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          }
+        },
+        {
+          "message": "No escucháis mis consejos. ¡Sin embargo, sabéis perfectamente quién reina sobre los hombres y los reyes!",
+          "yes": {
+            "answer": "Me arrepiento",
+            "churchPoints": 1,
+            "peoplePoints": 0,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          },
+          "no": {
+            "answer": "Desde luego no sois vos",
+            "churchPoints": -1,
+            "peoplePoints": 0,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          }
+        },
+        {
+          "message": "Deberíamos establecer un toque de queda. ¡Las calles de la capital son muy inseguras durante la noche!",
+          "yes": {
+            "answer": "Sí",
+            "churchPoints": 1,
+            "peoplePoints": 0,
+            "armyPoints": -1,
+            "moneyPoints": 0
+          },
+          "no": {
+            "answer": "No",
+            "churchPoints": -1,
+            "peoplePoints": -1,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          }
+        },
+        {
+          "message": "Parte del pueblo venera falsos dioses. ¡Vamos a quemar a las brujas!",
+          "yes": {
+            "answer": "No quiero saber nada",
+            "churchPoints": 1,
+            "peoplePoints": -1,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          },
+          "no": {
+            "answer": "De eso nada",
+            "churchPoints": -1,
+            "peoplePoints": 1,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          }
+        },
+        {
+          "message": "¡Viva el Rey! Voy a rezar por la prosperidad de Su Majestad.",
+          "yes": {
+            "answer": "Sí",
+            "churchPoints": 1,
+            "peoplePoints": 0,
+            "armyPoints": 0,
+            "moneyPoints": -1
+          },
+          "no": {
+            "answer": "No",
+            "churchPoints": -1,
+            "peoplePoints": 0,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          }
+        },
+        {
+          "message": "Un milagro en el Sur: una estatua del projeta derrama lágrimas de sangre. Deberíamos proclamar que son auténticas.",
+          "yes": {
+            "answer": "Sí",
+            "churchPoints": 1,
+            "peoplePoints": 1,
+            "armyPoints": 0,
+            "moneyPoints": -1
+          },
+          "no": {
+            "answer": "No",
+            "churchPoints": -1,
+            "peoplePoints": -1,
+            "armyPoints": -0,
+            "moneyPoints": 0
+          }
+        },
+        {
+          "message": "Un grupo de fanáticos ha saqueado un hospital, aclamando que solo Dios puede curarles con sus manos divinas.",
+          "yes": {
+            "answer": "Y así es",
+            "churchPoints": 1,
+            "peoplePoints": -1,
+            "armyPoints": -1,
+            "moneyPoints": -1
+          },
+          "no": {
+            "answer": "A decir verdad...",
+            "churchPoints": -1,
+            "peoplePoints": 1,
+            "armyPoints": 0,
+            "moneyPoints": -1
+          }
+        },
+        {
+          "message": "He aquí una mentira que os habéis tragado doblada. Bravo.",
+          "yes": {
+            "answer": "Sí",
+            "churchPoints": 0,
+            "peoplePoints": 0,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          },
+          "no": {
+            "answer": "No",
+            "churchPoints": 0,
+            "peoplePoints": 0,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          }
+        }
+      ]
+    },
+    "people": {
+      "characterName": "Villager",
+      "imagePath": "assets/images/base_cards/villager.png",
+      "color": "purple",
+      "dialogs": [
+        {
+          "message": "Señor, debemos gastar algo de dinero en construir una granja comunal para evitar la hambruna.",
+          "yes": {
+            "answer": "Sí",
+            "churchPoints": 0,
+            "peoplePoints": 1,
+            "armyPoints": 0,
+            "moneyPoints": -1
+          },
+          "no": {
+            "answer": "No",
+            "churchPoints": 0,
+            "peoplePoints": -1,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          }
+        },
+        {
+          "message": "El río Gota está seco otra vez. Deberíamos construir un pantano.",
+          "yes": {
+            "answer": "Sí",
+            "churchPoints": 0,
+            "peoplePoints": 1,
+            "armyPoints": 0,
+            "moneyPoints": -1
+          },
+          "no": {
+            "answer": "No",
+            "churchPoints": 0,
+            "peoplePoints": -1,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          }
+        },
+        {
+          "message": "¡Hemos encontrado agua en el lecho del río! ¿Qué hacemos con ella?",
+          "yes": {
+            "answer": "Compartamosla",
+            "churchPoints": 1,
+            "peoplePoints": 1,
+            "armyPoints": 1,
+            "moneyPoints": 0
+          },
+          "no": {
+            "answer": "¡Es toda mía!",
+            "churchPoints": 0,
+            "peoplePoints": 0,
+            "armyPoints": 0,
+            "moneyPoints": 1
+          }
+        },
+        {
+          "message": "Una explosión en una mina ha matado al menos a cien personas. ¿Seguimos cavando?",
+          "yes": {
+            "answer": "Sí",
+            "churchPoints": 0,
+            "peoplePoints": -1,
+            "armyPoints": 0,
+            "moneyPoints": 1
+          },
+          "no": {
+            "answer": "No",
+            "churchPoints": 0,
+            "peoplePoints": 1,
+            "armyPoints": 0,
+            "moneyPoints": -1
+          }
+        },
+        {
+          "message": "¡Las minas están llenas de oro, Señor!",
+          "yes": {
+            "answer": "¡Somos ricos!",
+            "churchPoints": 1,
+            "peoplePoints": 1,
+            "armyPoints": 1,
+            "moneyPoints": 1
+          },
+          "no": {
+            "answer": "¡Soy rico!",
+            "churchPoints": 0,
+            "peoplePoints": 0,
+            "armyPoints": 0,
+            "moneyPoints": 1
+          }
+        },
+        {
+          "message": "¡La cosecha es magnífica este año!",
+          "yes": {
+            "answer": "Alimentad al pueblo",
+            "churchPoints": 1,
+            "peoplePoints": 1,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          },
+          "no": {
+            "answer": "Alimentad al ejército",
+            "churchPoints": 0,
+            "peoplePoints": 0,
+            "armyPoints": 1,
+            "moneyPoints": 0
+          }
+        },
+        {
+          "message": "El ganado está diezmando más y más cada día a causa de la epidema. ¡Ayudad a los granjeros a controlarla!",
+          "yes": {
+            "answer": "Sí",
+            "churchPoints": 0,
+            "peoplePoints": 1,
+            "armyPoints": 0,
+            "moneyPoints": -1
+          },
+          "no": {
+            "answer": "No",
+            "churchPoints": 0,
+            "peoplePoints": -1,
+            "armyPoints": 0,
+            "moneyPoints": -1
+          }
+        },
+        {
+          "message": "He aquí una mentira que os habéis tragado doblada. Bravo.",
+          "yes": {
+            "answer": "Sí",
+            "churchPoints": 0,
+            "peoplePoints": 0,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          },
+          "no": {
+            "answer": "No",
+            "churchPoints": 0,
+            "peoplePoints": 0,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          }
+        },
+        {
+          "message": "He encontrado en el bosque un champiñón azul y otro naranja. El azul parece comestible.",
+          "yes": {
+            "answer": "Dádmelo",
+            "churchPoints": -10,
+            "peoplePoints": 0,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          },
+          "no": {
+            "answer": "Prefiero el naranja",
+            "churchPoints": 0,
+            "peoplePoints": 0,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          }
+        },
+        {
+          "message": "Señor, los lobos se comen a nuestros hijos. Debemos darles caza.",
+          "yes": {
+            "answer": "Os ayudaré",
+            "churchPoints": 0,
+            "peoplePoints": 1,
+            "armyPoints": -1,
+            "moneyPoints": 0
+          },
+          "no": {
+            "answer": "Os estáis tirando un farol.",
+            "churchPoints": 0,
+            "peoplePoints": -1,
+            "armyPoints": 1,
+            "moneyPoints": 0
+          }
+        }
+      ]
+    },
+    "army": {
+      "characterName": "Knight",
+      "imagePath": "assets/images/base_cards/knight.png",
+      "color": "red",
+      "dialogs": [
+        {
+          "message": "¿Deberíamos quemar Lamasco y matar a toda la población?",
+          "yes": {
+            "answer": "Sí",
+            "churchPoints": 0,
+            "peoplePoints": -1,
+            "armyPoints": 1,
+            "moneyPoints": 0
+          },
+          "no": {
+            "answer": "Descansa un rato",
+            "churchPoints": 0,
+            "peoplePoints": 1,
+            "armyPoints": -1,
+            "moneyPoints": 1
+          }
+        },
+        {
+          "message": "Hay que estar dispuesto a todo. ¡Reclutemos más soldados!",
+          "yes": {
+            "answer": "Sí",
+            "churchPoints": 0,
+            "peoplePoints": -1,
+            "armyPoints": 1,
+            "moneyPoints": -1
+          },
+          "no": {
+            "answer": "No",
+            "churchPoints": 0,
+            "peoplePoints": 0,
+            "armyPoints": -1,
+            "moneyPoints": 0
+          }
+        },
+        {
+          "message": "Mmm... (susurrando) Una joven asegura que si bastardo es hijo vuestro. ¿",
+          "yes": {
+            "answer": "Sí",
+            "churchPoints": 1,
+            "peoplePoints": 0,
+            "armyPoints": 1,
+            "moneyPoints": 0
+          },
+          "no": {
+            "answer": "No",
+            "churchPoints": -1,
+            "peoplePoints": 1,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          }
+        },
+        {
+          "message": "Ha habido una invasión masiva de presos. Organicemos una batida.",
+          "yes": {
+            "answer": "Sí",
+            "churchPoints": 0,
+            "peoplePoints": 0,
+            "armyPoints": 1,
+            "moneyPoints": 0
+          },
+          "no": {
+            "answer": "No",
+            "churchPoints": -1,
+            "peoplePoints": -1,
+            "armyPoints": -1,
+            "moneyPoints": -1
+          }
+        },
+        {
+          "message": "¡Todos los infieles del universo quieren vuestro pellejo! ¿Debemos continuar con la cruzada?",
+          "yes": {
+            "answer": "Sí",
+            "churchPoints": -1,
+            "peoplePoints": 1,
+            "armyPoints": -1,
+            "moneyPoints": 1
+          },
+          "no": {
+            "answer": "No",
+            "churchPoints": 1,
+            "peoplePoints": -1,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          }
+        },
+        {
+          "message": "¡Un terremoto destruye gran parte de la capital! Los guardas esperan sus órdenes.",
+          "yes": {
+            "answer": "Salvar a las víctimas",
+            "churchPoints": 0,
+            "peoplePoints": 1,
+            "armyPoints": 0,
+            "moneyPoints": -1
+          },
+          "no": {
+            "answer": "Evitar el saqueo",
+            "churchPoints": 0,
+            "peoplePoints": -1,
+            "armyPoints": 1,
+            "moneyPoints": 1
+          }
+        },
+        {
+          "message": "Ha habido una explosión en la capital. Es difícil saber lo que ha ocurrido. ¿Cerramos las puertas de la ciudad?",
+          "yes": {
+            "answer": "Sí",
+            "churchPoints": 0,
+            "peoplePoints": -1,
+            "armyPoints": 0,
+            "moneyPoints": -1
+          },
+          "no": {
+            "answer": "No",
+            "churchPoints": -1,
+            "peoplePoints": 1,
+            "armyPoints": -1,
+            "moneyPoints": 0
+          }
+        },
+        {
+          "message": "Un barco ha sido puesto en cuarentena. Puede que sea la peste. ¿Deberíamos extender la medida a todo el puerto?",
+          "yes": {
+            "answer": "Sí",
+            "churchPoints": 0,
+            "peoplePoints": 1,
+            "armyPoints": -1,
+            "moneyPoints": -1
+          },
+          "no": {
+            "answer": "No",
+            "churchPoints": 0,
+            "peoplePoints": -1,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          }
+        },
+        {
+          "message": "Los habitantes de un pueblo del Oeste tienen miedo de los duendes. ¿Quién se va a encargar?",
+          "yes": {
+            "answer": "Vos",
+            "churchPoints": 0,
+            "peoplePoints": 1,
+            "armyPoints": -1,
+            "moneyPoints": 0
+          },
+          "no": {
+            "answer": "Los duendes no existen",
+            "churchPoints": 1,
+            "peoplePoints": -1,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          }
+        },
+        {
+          "message": "¡Necesitamos mejores defensas! Los bárbaros del Este están a las puertas del reino.",
+          "yes": {
+            "answer": "Sí",
+            "churchPoints": 0,
+            "peoplePoints": 0,
+            "armyPoints": 1,
+            "moneyPoints": -1
+          },
+          "no": {
+            "answer": "No",
+            "churchPoints": 0,
+            "peoplePoints": 0,
+            "armyPoints": -1,
+            "moneyPoints": 0
+          }
+        },
+        {
+          "message": "Vuestra fortaleza es demasiado frágil. Construyamos una nueva torre.",
+          "yes": {
+            "answer": "Sí",
+            "churchPoints": 0,
+            "peoplePoints": 0,
+            "armyPoints": 1,
+            "moneyPoints": -1
+          },
+          "no": {
+            "answer": "No",
+            "churchPoints": 0,
+            "peoplePoints": -1,
+            "armyPoints": -1,
+            "moneyPoints": 0
+          }
+        },
+        {
+          "message": "¡Los ducados del Este nos atacan! Solo saldremos de ésta si alistamos población.",
+          "yes": {
+            "answer": "Sí",
+            "churchPoints": 0,
+            "peoplePoints": -1,
+            "armyPoints": 1,
+            "moneyPoints": 0
+          },
+          "no": {
+            "answer": "No",
+            "churchPoints": 0,
+            "peoplePoints": 0,
+            "armyPoints": -1,
+            "moneyPoints": 0
+          }
+        },
+        {
+          "message": "Los salarios de los soldados son demasiado bajos. Hay que pagarles como Dios manda y a tiempo.",
+          "yes": {
+            "answer": "Sí",
+            "churchPoints": 0,
+            "peoplePoints": 0,
+            "armyPoints": 1,
+            "moneyPoints": -1
+          },
+          "no": {
+            "answer": "No",
+            "churchPoints": 0,
+            "peoplePoints": 0,
+            "armyPoints": -1,
+            "moneyPoints": 0
+          }
+        },
+        {
+          "message": "He aquí una mentira que os habéis tragado doblada. Bravo.",
+          "yes": {
+            "answer": "Sí",
+            "churchPoints": 0,
+            "peoplePoints": 0,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          },
+          "no": {
+            "answer": "No",
+            "churchPoints": 0,
+            "peoplePoints": 0,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          }
+        },
+        {
+          "message": "Deberíais construir un mueso de ciencas para mostrar la vida en toda su variedad. Puedo ayudaros en mi tiempo libre.",
+          "yes": {
+            "answer": "Sí",
+            "churchPoints": -1,
+            "peoplePoints": 1,
+            "armyPoints": 1,
+            "moneyPoints": -1
+          },
+          "no": {
+            "answer": "A entrenar",
+            "churchPoints": 1,
+            "peoplePoints": 0,
+            "armyPoints": -1,
+            "moneyPoints": 0
+          }
+        },
+        {
+          "message": "¡Victoria! Los vikingos han sido derrotados. ¿Masacramos a los prisioneros?",
+          "yes": {
+            "answer": "¡Sin piedad!",
+            "churchPoints": 1,
+            "peoplePoints": -1,
+            "armyPoints": 1,
+            "moneyPoints": 0
+          },
+          "no": {
+            "answer": "Dejadles partir",
+            "churchPoints": -1,
+            "peoplePoints": 1,
+            "armyPoints": -1,
+            "moneyPoints": 1
+          }
+        }
+      ]
+    },
+    "money": {
+      "characterName": "Bank guy",
+      "imagePath": "assets/images/base_cards/bank_guy.png",
+      "color": "black",
+      "dialogs": [
+        {
+          "message": "Es el invierno más duro de los últimos 30 años. Con la escasa cosecha del año pasado, el pueblo está hambriento.",
+          "yes": {
+            "answer": "Repartamos nuestras cosechas",
+            "churchPoints": 0,
+            "peoplePoints": 1,
+            "armyPoints": 0,
+            "moneyPoints": -1
+          },
+          "no": {
+            "answer": "No puedo hacer nada",
+            "churchPoints": 0,
+            "peoplePoints": 0,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          }
+        },
+        {
+          "message": "Podríamos ganar algo de dinero aumentando el alquiler de las casas que hemos construido para los pobres.",
+          "yes": {
+            "answer": "Sí",
+            "churchPoints": 0,
+            "peoplePoints": -1,
+            "armyPoints": 0,
+            "moneyPoints": 1
+          },
+          "no": {
+            "answer": "No",
+            "churchPoints": 0,
+            "peoplePoints": 1,
+            "armyPoints": 0,
+            "moneyPoints": -1
+          }
+        },
+        {
+          "message": "Nuestra bella capital huele a cadáver durante la mitad del año. Construyamos un sistema de desagües.",
+          "yes": {
+            "answer": "Sí",
+            "churchPoints": 0,
+            "peoplePoints": -1,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          },
+          "no": {
+            "answer": "No",
+            "churchPoints": 0,
+            "peoplePoints": 1,
+            "armyPoints": 0,
+            "moneyPoints": -1
+          }
+        },
+        {
+          "message": "Los orfebres de la capital han creado un consorcio para organizar el comercio. Solicitan vuestra aprobación.",
+          "yes": {
+            "answer": "Sí",
+            "churchPoints": -1,
+            "peoplePoints": 0,
+            "armyPoints": 0,
+            "moneyPoints": 1
+          },
+          "no": {
+            "answer": "No",
+            "churchPoints": 0,
+            "peoplePoints": -1,
+            "armyPoints": 0,
+            "moneyPoints": 1
+          }
+        },
+        {
+          "message": "Un duque ha decidio reestablecer el derecho de pernada.",
+          "yes": {
+            "answer": "No sin antes pasar por caja",
+            "churchPoints": 0,
+            "peoplePoints": -1,
+            "armyPoints": 0,
+            "moneyPoints": 1
+          },
+          "no": {
+            "answer": "Ni hablar",
+            "churchPoints": 0,
+            "peoplePoints": 1,
+            "armyPoints": 0,
+            "moneyPoints": -1
+          }
+        },
+        {
+          "message": "Los cereales están muy asequibles en este momento mi Señor. Deberíamos reajustar el precio del pan.",
+          "yes": {
+            "answer": "Aumentadlo un poco",
+            "churchPoints": 0,
+            "peoplePoints": 0,
+            "armyPoints": 0,
+            "moneyPoints": 1
+          },
+          "no": {
+            "answer": "Asi esta bien",
+            "churchPoints": 0,
+            "peoplePoints": 1,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          }
+        },
+        {
+          "message": "El pueblo come demasiado, están gordos y son perezosos. Deberíais aumentar el precio del pan.",
+          "yes": {
+            "answer": "¡Duplicadlo!",
+            "churchPoints": 0,
+            "peoplePoints": -1,
+            "armyPoints": 0,
+            "moneyPoints": 1
+          },
+          "no": {
+            "answer": "No",
+            "churchPoints": 0,
+            "peoplePoints": 1,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          }
+        },
+        {
+          "message": "He aquí una mentira que os habéis tragado doblada. Bravo.",
+          "yes": {
+            "answer": "Sí",
+            "churchPoints": 0,
+            "peoplePoints": 0,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          },
+          "no": {
+            "answer": "No",
+            "churchPoints": 0,
+            "peoplePoints": 0,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          }
+        },
+        {
+          "message": "El mercado negro prospera. Tenéis que enviar al ejército a las calles a que ponga fin.",
+          "yes": {
+            "answer": "Sí",
+            "churchPoints": 0,
+            "peoplePoints": -1,
+            "armyPoints": 0,
+            "moneyPoints": 1
+          },
+          "no": {
+            "answer": "No",
+            "churchPoints": 0,
+            "peoplePoints": 1,
+            "armyPoints": 0,
+            "moneyPoints": -1
+          }
+        },
+        {
+          "message": "El precio del pollo aumenta sin cesar. ¡La gente ha empezado a especular! Deberíamos hacer algo para regular el mercado.",
+          "yes": {
+            "answer": "Sí",
+            "churchPoints": 0,
+            "peoplePoints": 0,
+            "armyPoints": 0,
+            "moneyPoints": 1
+          },
+          "no": {
+            "answer": "¡Pues que coman ternera!",
+            "churchPoints": 0,
+            "peoplePoints": -1,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          }
+        }
+      ]
+    }
+  },
+  "devilCards": {
+    "dog": {
+      "characterName": "Rex",
+      "imagePath": "assets/images/devil_cards/dog.png",
+      "dialogs": [
+        {
+          "message": "¡Guau! ¡Guauuu! (Rex os invita a seguirle)",
+          "yes": {
+            "answer": "Vale, vale",
+            "churchPoints": 0,
+            "peoplePoints": 0,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          },
+          "no": {
+            "answer": "Tranquilo",
+            "churchPoints": 0,
+            "peoplePoints": 0,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          }
+        },
+        {
+          "message": "¡Guau! (Rex parece nervioso)",
+          "yes": {
+            "answer": "¡Sé bueno!",
+            "churchPoints": 0,
+            "peoplePoints": 0,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          },
+          "no": {
+            "answer": "¡No, aquí no!",
+            "churchPoints": 0,
+            "peoplePoints": 0,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          }
+        }
+      ]
+    },
+    "devilGuy": {
+      "characterName": "???",
+      "imagePath": "assets/images/devil_cards/devil_guy.png"
+
+    },
+    "devilJoker": {
+      "characterName": "???",
+      "imagePath": "assets/images/devil_joker/dog.png"
+    },
+    "devilPope": {
+      "characterName": "???",
+      "imagePath": "assets/images/devil_cards/devil_pope.png"
+    },
+    "devilDog": {
+      "characterName": "???",
+      "imagePath": "assets/images/devil_cards/devil_dog.png",
+      "dialogs": [
+        {
+          "message": "Reyecillo, marioneta",
+          "yes": {
+            "answer": "Sí",
+            "churchPoints": 0,
+            "peoplePoints": 0,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          },
+          "no": {
+            "answer": "No",
+            "churchPoints": 0,
+            "peoplePoints": 0,
+            "armyPoints": 0,
+            "moneyPoints": 0
+          }
+        }
+      ]
+    }
+  },
+  "deadCards": {
+    "church": {
+      "imagePath": "assets/images/dead_cards/dead_church.png",
+      "message": "Un monje os apuñala mientras dormiis. El reino cae en manos de la Iglesia."
+    },
+    "people": {
+      "imagePath": "assets/images/dead_cards/dead_people.png",
+      "message": "Una multitud sedienta de libertad os masacra en vuestra tentativa de evasión."
+    },
+    "army": {
+      "imagePath": "assets/images/dead_cards/dead_army.png",
+      "message": "El castillo es saqueado, vuestra corte se dispersa y solo os quedan como últimos súbditos las palomas."
+    },
+    "money": {
+      "imagePath": "assets/images/dead_cards/dead_money.png",
+      "message": "La nueva oligarquía os envia al exilio."
+    }
+  },
+  "initialCards": {
+    
+  }
+}

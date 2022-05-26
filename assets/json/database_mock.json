@@ -159,7 +159,7 @@
           }
         },
         {
-          "message": "Un milagro en el Sur: una estatua del projeta derrama lágrimas de sangre. Deberíamos proclamar que son auténticas.",
+          "message": "Un milagro en el Sur: una estatua del profeta derrama lágrimas de sangre. Deberíamos proclamar que son auténticas.",
           "yes": {
             "answer": "Sí",
             "churchPoints": 1,
@@ -428,7 +428,7 @@
           }
         },
         {
-          "message": "Mmm... (susurrando) Una joven asegura que si bastardo es hijo vuestro. ¿",
+          "message": "Mmm... (susurrando) Una joven asegura que su bastardo es hijo vuestro. ¿Nos deshacemos del problema?",
           "yes": {
             "answer": "Sí",
             "churchPoints": 1,

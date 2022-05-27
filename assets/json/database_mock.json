@@ -889,7 +889,6 @@
     "devilGuy": {
       "characterName": "???",
       "imagePath": "assets/images/devil_cards/devil_guy.png"
-
     },
     "devilJoker": {
       "characterName": "???",
@@ -942,6 +941,5 @@
     }
   },
   "initialCards": {
-    
   }
 }

@@ -1,4 +1,6 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:crown/ui/splash_screen.dart';
+import 'package:crown/utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class RetryButton extends StatelessWidget {
@@ -7,16 +9,24 @@ class RetryButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () => Navigator.pushNamedAndRemoveUntil(
-          context, SplashScreen.routeID, (route) => false),
+      onPressed: () {
+        AudioPlayer.players.values
+            .forEach((AudioPlayer audioPlayer) => audioPlayer.stop());
+
+        Navigator.pushNamedAndRemoveUntil(
+            context, SplashScreen.routeID, (route) => false);
+      },
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all(Colors.red),
+        backgroundColor: MaterialStateProperty.all(BUTTON_COLOR),
         elevation: MaterialStateProperty.all(10),
         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         ),
       ),
-      child: const Text('RETRY?'),
+      child: const Text(
+        'RETRY?',
+        style: TextStyle(color: Colors.black),
+      ),
     );
   }
 }

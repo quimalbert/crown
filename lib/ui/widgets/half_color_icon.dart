@@ -1,3 +1,4 @@
+import 'package:crown/utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class HalfColorIcon extends StatelessWidget {
@@ -13,9 +14,7 @@ class HalfColorIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double _colorPercentage = points / 10;
-    const Color _backgroundColor = Colors.black;
     const double _size = 50;
-    const Color _pointsColor = Colors.yellow;
 
     return ShaderMask(
       blendMode: BlendMode.srcATop,
@@ -25,9 +24,9 @@ class HalfColorIcon extends StatelessWidget {
           end: Alignment.topCenter,
           stops: [0, _colorPercentage, 0],
           colors: [
-            _backgroundColor,
-            _backgroundColor,
-            _backgroundColor.withOpacity(0),
+            ICON_FILL_COLOR,
+            ICON_FILL_COLOR,
+            ICON_FILL_COLOR.withOpacity(0),
           ],
         ).createShader(rect);
       },
@@ -37,7 +36,7 @@ class HalfColorIcon extends StatelessWidget {
         child: Icon(
           icon,
           size: _size,
-          color: _pointsColor,
+          color: ICON_BACKGROUND_COLOR,
         ),
       ),
     );

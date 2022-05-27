@@ -1,6 +1,7 @@
 import 'package:crown/domain/card_answer.dart';
 import 'package:crown/domain/custom_card.dart';
 import 'package:crown/ui/widgets/answer_button.dart';
+import 'package:crown/ui/widgets/base_card.dart';
 import 'package:crown/ui/widgets/custom_appbar.dart';
 import 'package:crown/ui/widgets/game_card.dart';
 import 'package:crown/ui/widgets/game_over.dart';
@@ -9,13 +10,6 @@ import 'package:crown/ui/widgets/retry_button.dart';
 import 'package:flutter/material.dart';
 
 import '../utils/constants.dart';
-
-//TODO animated color per als icones quan guanyes / perds punts: https://stackoverflow.com/questions/53520488/how-to-animate-the-color-of-a-raisedbutton-in-flutter
-//TODO AFEGIR MUSICA
-// ROTMG 1: https://www.youtube.com/watch?v=B8ruRCSC91c
-// ROTMG 2: https://www.youtube.com/watch?v=ipk0E1wanl4
-// TODO afegir animations: flip card: https://medium.com/flutter-community/flutter-flip-card-animation-eb25c403f371
-// TODO afegir app icon, nom i splash screen
 
 class GameScreen extends StatefulWidget {
   static const String routeID = '/game';
@@ -34,6 +28,7 @@ class _GameScreenState extends State<GameScreen> {
   late int _churchPoints, _peoplePoints, _armyPoints, _moneyPoints;
 
   bool _isKingDead = false;
+  bool _isAnswerPressed = true;
 
   @override
   void initState() {
@@ -52,7 +47,7 @@ class _GameScreenState extends State<GameScreen> {
     if (_isKingDead) {
       return SafeArea(
         child: Scaffold(
-          backgroundColor: standardBackgroundColor,
+          backgroundColor: BACKGROUND_COLOR,
           appBar: CustomAppBar(
             churchPoints: _churchPoints,
             peoplePoints: _peoplePoints,
@@ -73,7 +68,7 @@ class _GameScreenState extends State<GameScreen> {
     if (_customCardList.isEmpty) {
       return SafeArea(
         child: Scaffold(
-          backgroundColor: standardBackgroundColor,
+          backgroundColor: BACKGROUND_COLOR,
           appBar: CustomAppBar(
             churchPoints: _churchPoints,
             peoplePoints: _peoplePoints,
@@ -88,7 +83,7 @@ class _GameScreenState extends State<GameScreen> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 64,
-                  color: Colors.white,
+                  color: APPBAR_COLOR,
                 ),
               ),
               RetryButton(),
@@ -100,7 +95,7 @@ class _GameScreenState extends State<GameScreen> {
 
     return SafeArea(
       child: Scaffold(
-        backgroundColor: standardBackgroundColor,
+        backgroundColor: BACKGROUND_COLOR,
         appBar: CustomAppBar(
           churchPoints: _churchPoints,
           peoplePoints: _peoplePoints,
@@ -115,9 +110,17 @@ class _GameScreenState extends State<GameScreen> {
               SizedBox(height: DEVICE_SCREEN_HEIGHT * 0.025),
               HeaderTextWidget(text: _customCardList.first.message),
               SizedBox(height: DEVICE_SCREEN_HEIGHT * 0.0125),
-              GameCard(
-                backgroundColor: _customCardList.first.color,
-                imagePath: _customCardList.first.imagePath,
+              AnimatedSwitcher(
+                duration: const Duration(milliseconds: 600),
+                child: _isAnswerPressed
+                    ? GameCard(
+                        backgroundColor: _customCardList.first.color,
+                        imagePath: _customCardList.first.imagePath,
+                      )
+                    : const BaseCard(
+                        backgroundColor: ICON_BACKGROUND_COLOR,
+                        child: SizedBox(),
+                      ),
               ),
               SizedBox(height: DEVICE_SCREEN_HEIGHT * 0.0125),
               AnswerButton(
@@ -137,8 +140,9 @@ class _GameScreenState extends State<GameScreen> {
     );
   }
 
-  void _updateGame(CardAnswer _cardAnswer) {
+  void _updateGame(CardAnswer _cardAnswer) async {
     setState(() {
+      _isAnswerPressed = false;
       _churchPoints += _cardAnswer.churchPoints;
       _peoplePoints += _cardAnswer.peoplePoints;
       _armyPoints += _cardAnswer.armyPoints;
@@ -146,6 +150,10 @@ class _GameScreenState extends State<GameScreen> {
 
       _customCardList.removeAt(0);
     });
+
+    await Future.delayed(const Duration(milliseconds: 600));
+
+    setState(() => _isAnswerPressed = true);
 
     _checkPoints();
   }

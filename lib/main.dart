@@ -1,5 +1,6 @@
 import 'package:crown/ui/game_screen.dart';
 import 'package:crown/ui/splash_screen.dart';
+import 'package:crown/utils/constants.dart';
 import 'package:crown/utils/context.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      color: APPBAR_COLOR,
       navigatorKey: Context.globalKey,
       initialRoute: SplashScreen.routeID,
       routes: {

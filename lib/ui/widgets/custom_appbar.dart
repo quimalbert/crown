@@ -1,3 +1,4 @@
+import 'package:crown/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
@@ -19,7 +20,7 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.redAccent,
+      backgroundColor: APPBAR_COLOR,
       toolbarHeight: _appBarHeight,
       flexibleSpace: SizedBox(
         height: _appBarHeight,

@@ -29,21 +29,23 @@ class AnswerButton extends StatelessWidget {
                   Expanded(
                       child: Text(
                     text,
+                    style: const TextStyle(color: APPBAR_COLOR),
                     textAlign: TextAlign.left,
                   )),
-                  const Icon(Icons.arrow_right),
+                  const Icon(Icons.arrow_right, color: APPBAR_COLOR),
                 ]
               : [
-                  const Icon(Icons.arrow_left),
+                  const Icon(Icons.arrow_left, color: APPBAR_COLOR),
                   Expanded(
                       child: Text(
                     text,
+                    style: const TextStyle(color: APPBAR_COLOR),
                     textAlign: TextAlign.right,
                   )),
                 ],
         ),
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(Colors.red),
+          backgroundColor: MaterialStateProperty.all(BUTTON_COLOR),
           elevation: MaterialStateProperty.all(10),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),

@@ -925,7 +925,7 @@
   "deadCards": {
     "church": {
       "imagePath": "assets/images/dead_cards/dead_church.png",
-      "message": "Un monje os apuñala mientras dormiis. El reino cae en manos de la Iglesia."
+      "message": "Un monje os apuñala mientras dormiis. El reino cae en manos del Papa."
     },
     "people": {
       "imagePath": "assets/images/dead_cards/dead_people.png",

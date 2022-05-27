@@ -24,7 +24,7 @@ class RetryButton extends StatelessWidget {
         ),
       ),
       child: const Text(
-        'RETRY?',
+        'Empezamos de nuevo?',
         style: TextStyle(color: Colors.black),
       ),
     );

@@ -20,7 +20,7 @@ class BaseCard extends StatelessWidget {
       child: Card(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15.0),
-          side: const BorderSide(color: Colors.white, width: 2),
+          side: const BorderSide(color: APPBAR_COLOR, width: 2),
         ),
         color: backgroundColor,
         elevation: 10,

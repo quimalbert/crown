@@ -55,8 +55,13 @@ class _GameScreenState extends State<GameScreen> {
             moneyPoints: _moneyPoints,
           ),
           body: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
+              Text(
+                _getGameOverMessage(),
+                style: cardMessageTextStyle,
+                textAlign: TextAlign.center,
+              ),
               GameOverWidget(imagePath: _getGameOverImagePath()),
               const RetryButton(),
             ],
@@ -76,10 +81,10 @@ class _GameScreenState extends State<GameScreen> {
             moneyPoints: _moneyPoints,
           ),
           body: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: const [
               Text(
-                'YOU WIN',
+                '¡HAS SUPERADO LA VERSIÓN DE PRUEBA!',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 64,
@@ -185,5 +190,24 @@ class _GameScreenState extends State<GameScreen> {
     }
 
     return _imagePath;
+  }
+
+  String _getGameOverMessage() {
+    String _message;
+
+    if (_churchPoints <= 0 || _churchPoints > 10) {
+      _message =
+          "Un monje os apuñala mientras dormiis. El reino cae en manos del Papa.";
+    } else if (_peoplePoints <= 0 || _peoplePoints > 10) {
+      _message =
+          "Una multitud sedienta de libertad os masacra en vuestra tentativa de evasión.";
+    } else if (_armyPoints <= 0 || _armyPoints > 10) {
+      _message =
+          "El castillo es saqueado, vuestra corte se dispersa y solo os quedan como últimos súbditos las palomas.";
+    } else {
+      _message = "La nueva oligarquía os envia al exilio.";
+    }
+
+    return _message;
   }
 }
